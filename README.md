@@ -2,6 +2,9 @@
 Simple API  Client using URLSession with async/await and SwiftUI 
 
 
+![Example APi Client Request](Screenshot.png)
+
+
 ## NOTE
 
 This example use fakestoreapi.com

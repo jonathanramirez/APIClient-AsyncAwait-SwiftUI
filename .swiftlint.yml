@@ -1,0 +1,22 @@
+disabled_rules:
+- force_cast
+
+opt_in_rules:
+- private_outlet
+- vertical_whitespace
+- overridden_super_call
+- implicit_return
+
+excluded:
+  - Pods
+
+line_length: 160
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 60
+    error: 100
+
+identifier_name:
+    min_length: 2
