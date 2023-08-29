@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol APIClient {
+public protocol APIClient {
     func sendRequest<T: Codable>(endpoint: Endpoint, session: Networking) async throws -> T
 }
 
 extension APIClient {
-    func sendRequest<T: Codable>(endpoint: Endpoint, session: Networking = URLSession.shared) async throws -> T {
+    public func sendRequest<T: Codable>(endpoint: Endpoint, session: Networking = URLSession.shared) async throws -> T {
 
         var urlComponents = URLComponents()
         urlComponents.scheme = endpoint.scheme
@@ -42,12 +42,12 @@ extension APIClient {
                 throw APIClientError.noResponse
             }
             switch response.statusCode {
-                case 200...299:
-                    guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
-                        throw APIClientError.decode
-                    }
-                    return decodedResponse
-                default:
+            case 200...299:
+                guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else {
+                    throw APIClientError.decode
+                }
+                return decodedResponse
+            default:
                 throw APIClientError.badResponse
             }
 

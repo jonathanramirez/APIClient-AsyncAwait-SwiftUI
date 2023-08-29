@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import APIClient
 
 protocol ProductsClient {
     func getProducts() async throws -> Products

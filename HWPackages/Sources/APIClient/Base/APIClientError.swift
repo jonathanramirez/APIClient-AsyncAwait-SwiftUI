@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum APIClientError: Error {
+public enum APIClientError: Error {
     case invalidURL
     case noResponse
     case decode

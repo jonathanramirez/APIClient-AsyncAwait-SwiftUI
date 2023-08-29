@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import APIClient
 
 enum ProductEndpoint {
     case getProducts

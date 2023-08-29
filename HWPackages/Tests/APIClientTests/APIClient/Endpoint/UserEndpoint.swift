@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import APIClientAsyncAwaitSwiftUI
+@testable import APIClient
 
 enum UserEndpoint {
     case getUser

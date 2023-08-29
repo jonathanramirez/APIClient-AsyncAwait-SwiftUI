@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import APIClientAsyncAwaitSwiftUI
+import APIClient
 
 struct MockApiClient: APIClient {
     var session: Networking

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import APIClientAsyncAwaitSwiftUI
+import APIClient
 
 final class APIClientTest: XCTestCase {
 
